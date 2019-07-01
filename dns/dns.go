@@ -63,10 +63,11 @@ func DnsRequestHandler (w dns.ResponseWriter, r *dns.Msg){
 		fileMutex.Lock()
 		//os.Truncate("./logs/log.txt", 1024*1024)
 		f,_:=os.OpenFile("./logs/log.txt",os.O_RDWR|os.O_CREATE,0600)
-		f.Seek(213,0)
+		f.Seek(142,0)
 		remainder,_ := ioutil.ReadAll(f)
-		f.Seek(213,0)
+		f.Seek(142,0)
 		table := tw.NewWriter(f)
+		table.SetBorders(tw.Border{Left: true, Top: true, Right: true, Bottom: false})
 		data := []string{tw.Pad(time.Now().Format("2006.01.02 15:04")," ",20),tw.Pad(w.RemoteAddr().String()," ",20) ,tw.Pad(domain," ",20)}
 		table.Append(data)
 		table.Render()
