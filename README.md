@@ -13,7 +13,29 @@ Just grub binary from release for Linux =)
 
 ### Usage
 
-By default you only need to specify ```-zone``` flag with domain name you have. For security purposes additionally change ```-username``` and ```-password``` used to login to the web interface with logs.
+By default you only need to specify ```-zone``` flag with domain name you have. For security purposes additionally change ```-username``` and ```-password``` used to login to the web interface with logs. Then run the binary and access logs of DNS requests through web interface (by default ```http://<IP>:8080/secure_logs```).
+
+### Command line args
+
+```
+Usage of ./godnsniffer:
+  -dns-ip string
+    	IPv4 address for DNS to listen on (default "0.0.0.0")
+  -log-dir string
+    	Default web directory to server logs (default "/secure_logs")
+  -password string
+    	Default password for web interface (default "GiveMeLogz")
+  -port int
+    	Port to run webserver with logs on (default 8080)
+  -ttl int
+    	TTL of DNS records (default 86400)
+  -username string
+    	Default username for web interface (default "admin")
+  -web-ip string
+    	IPv4 address for webserver to listen on. Default 0.0.0.0 (default "0.0.0.0")
+  -zone string
+    	DNS zone to serve (default "test.pw")
+```
 
 ### Notice
 
