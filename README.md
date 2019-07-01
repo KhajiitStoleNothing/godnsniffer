@@ -7,6 +7,10 @@ Go DNS Sniffer: Simple sniffer and logger of DNS requestes, written on GO.
 
 To build godnsniffer from source, simply run ```go get github.com/khajiitstolenothing/godnsniffer``` and ```cd``` into the project source directory. Then, run ```go build```. After this, you should have a binary called ```godnsffier``` in the current directory.
 
+### Better way to install and use
+
+Just grub binary from release for Linux =)
+
 ### Usage
 
 By default you only need to specify ```-zone``` flag with domain name you have. For security purposes additionally change ```-username``` and ```-password``` used to login to the web interface with logs.
